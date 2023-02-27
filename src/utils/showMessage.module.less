@@ -1,0 +1,35 @@
+@import '../styles/mixin.less';
+@import '../styles/var.less';
+.message{
+    .self-center();
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px rgba((0), 0, 0, .5);
+    padding: 10px 30px;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: .5s;
+    transform: translate(-50%,-50%) translateY(15px);
+    opacity: 0;
+    white-space: nowrap;
+    // nowrap：只保留⼀个空⽩，⽂本不会换⾏，会在在同⼀⾏上继续，直到遇到br标签为⽌。
+
+    &-info{
+        background-color: @primary;
+    }
+    &-success{
+        background: @success;
+    }
+    &-warn{
+        background: @warn;
+    }
+    &-error{
+        background: @danger;
+    }
+}
+.icon{
+    font-size: 26px;
+    margin-right: 7px;
+}
